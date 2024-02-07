@@ -1,5 +1,9 @@
 # ML Based Movie Recommendation System
-A content-based recommender system that evaluates user evaluations to suggest films that are sentimentally comparable to the user's favorite films.
+Recommender systems are an important class of machine learning algorithms that offer “relevant” suggestions to users. YouTube, Amazon, Netflix, all function on recommendation systems where the system recommends you the next video or product based on your past activity (Content-based Filtering) or based on activities and preferences of other users similar to you (Collaborative Filtering). Recommendation Systems work based on the similarity between either the content or the users who access the content. Recommender systems encompass a class of techniques and algorithms that can suggest “relevant” items to users. They predict future behavior based on past data through a multitude of techniques. It’s an advanced filtration mechanism that predicts the possible movie choices of the concerned user and their preferences towards a domain-specific item, aka movie. There are several ways to
+measure the similarity between two items. The recommendation systems use this similarity matrix to recommend the next most similar product to the user.
+In this project, A content-based recommender system that recommends movies similar to the movie the user likes and analyses the sentiments of the reviews given by the user and will be
+implemented with the Frontend also. Movie recommendation system an ML-based approach to filtering or predicting the user's recommendations based on the input of the movie name.
+This model would be based on Cosine Similarity and the analysis of sentiments will be based on Naïve Bayes Algorithm. 
 
 ## Overview
 
