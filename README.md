@@ -1,29 +1,25 @@
-# Movie Recommendation System
-
-![Python](https://img.shields.io/badge/Python-3.8-blueviolet)
-![Framework](https://img.shields.io/badge/Framework-Flask-red)
-![Frontend](https://img.shields.io/badge/Frontend-HTML/CSS/JS-green)
-![API](https://img.shields.io/badge/API-TMDB-fcba03)
-
-A content-based recommender system that recommends movies similar to the movies the user likes and analyses the sentiments of the reviews given by the user.
+# ML Based Movie Recommendation System
+A content-based recommender system that evaluates user evaluations to suggest films that are sentimentally comparable to the user's favorite films.
 
 ## Overview
 
-The movies are recommended based on the content of the movie you entered or selected. The main parameters that are considered for the recommendations are the genre, director, and top 3 casts. The details of the movies, such as title, genre, runtime, rating, poster, casts, etc., are fetched from [TMDB](https://www.themoviedb.org/documentation/api). The reviews of each movie given by the users are "web-scraped" from the IMDB website with the help of `beautifulsoup4`, and the reviews are subjected to sentiment analysis, where the model predicts whether the review is positive or negative.
+The content of the movie you input or choose is taken into consideration when suggesting movies. The genre, the director, and the top three casts are the primary factors taken into account while making suggestions. Titles, genres, runtimes, ratings, posters, casts, and other movie details are retrieved from [TMDB](https://www.themoviedb.org/documentation/api). With the aid of `beautifulsoup4}, user reviews of every movie are "web-scraped" from the IMDB website and then passed through sentiment analysis, where a model determines if the review is favorable or unfavorable.
 
-## How to get the API key?
 
-Create an account at https://www.themoviedb.org/. Once you successfully create an account, click on the `API` link from the left-hand sidebar in your account settings and fill in all the details to apply for an API key. If you are asked for the website URL, just give "NA" if you don't have one. You will see the API key in your `API` sidebar once your request has been approved.
+## Getting the API key?
+
+Go to https://www.themoviedb.org/ and create an account. After creating an account successfully, go to your account settings, click the `API` link in the left-hand sidebar, and complete the application to request an API key. If you don't have a website URL, simply respond with "NA" when requested. Once your request has been approved, you will see the API key in your {API} sidebar.
+
 
 ## How to run the project?
 
-1. Clone or download this repository to your local machine.
-2. Install all the libraries mentioned in the requirements.txt file with the command `pip install -r requirements.txt`
-3. Get your API key from https://www.themoviedb.org/. (Refer to the above section on how to get the API key)
-3. Replace YOUR_API_KEY in **both** the places (lines no. 15 and 29) of the `static/recommend.js` file and hit save.
-4. Open your terminal/command prompt from your project directory and run the file `main.py` by executing the command `python main.py`.
-5. Go to your browser and type `http://127.0.0.1:5000/` in the address bar.
-6. Hurray! That's it.
+1. Download or clone this repository to your computer.
+2. Use the command `pip install -r requirements.txt` to install every library included in the requirements.txt file.
+3. Visit https://www.themoviedb.org/ to obtain your API key. (See the section above for information on obtaining the API key.)
+3. In the `static/recommend.js} file, replace YOUR_API_KEY in **both** the locations (lines no. 15 and 29) and press save.
+4. From your project directory, open a terminal or command prompt. Run the file `main.py` by typing the command `python main.py}.
+5. Enter {http://127.0.0.1:5000/} in the address bar of your browser.
+
 
 ## Architecture
 
@@ -31,19 +27,19 @@ Create an account at https://www.themoviedb.org/. Once you successfully create a
 
 ## Similarity Score : 
 
-   **How does it decide which item is most similar to the item the user likes(or selects in our case)?** Here are the similarity scores.
+   **How does it determine which item most closely resembles the one the user likes—or, in this case, chooses—?** These are the scores for similarity.
    
-   It is a numerical value that ranges between zero to one which helps to determine how much two items are similar to each other on a scale of zero to one. This similarity score is obtained by measuring the similarity between the text details of both of the items. So, similarity score is the measure of similarity between given text details of two items. This can be done by cosine-similarity.
+   To find out how similar two items are to one another on a scale of zero to one, there is a numerical number that goes from zero to one. The similarity between the text details of the two items is measured in order to get this similarity score. As a result, the similarity score represents the degree of similarity between two items' provided text details. One method for doing this is cosine-similarity.
    
 ## How does Cosine Similarity work?
-  Cosine similarity is a metric used to measure how similar the documents are irrespective of their size. Mathematically, it measures the cosine of the angle between two vectors projected in a multi-dimensional space. The cosine similarity is advantageous because even if the two similar documents are far apart by the Euclidean distance (due to the size of the document), chances are they may still be oriented closer together. The smaller the angle, the higher the cosine similarity.
+  Regardless of the size of the documents, cosine similarity is a metric used to assess how similar they are. The cosine of the angle formed by two vectors projected in a multidimensional space is what is measured mathematically. Because the two comparable documents may still be oriented closer together even if they are far apart by the Euclidean distance (due to document size), cosine similarity is advantageous. The cosine similarity increases with decreasing angle.
   
   ![image](https://user-images.githubusercontent.com/36665975/70401457-a7530680-1a55-11ea-9158-97d4e8515ca4.png)
 
   
 More about Cosine Similarity : [Understanding the Math behind Cosine Similarity](https://www.machinelearningplus.com/nlp/cosine-similarity/)
 
-### Sources of the datasets 
+### Dataset Sources
 
 1. [IMDB 5000 Movie Dataset](https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset)
 2. [The Movies Dataset](https://www.kaggle.com/rounakbanik/the-movies-dataset)
