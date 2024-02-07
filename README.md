@@ -26,8 +26,8 @@ Go to https://www.themoviedb.org/ and create an account. After creating an accou
 
 
 ## Architecture
+![system arcitecture](image.png)
 
-![Recommendation App](https://user-images.githubusercontent.com/36665975/168742738-5435cf76-1a42-4d87-94b4-999e5bfc48d3.png)
 
 ## Similarity Score : 
 
@@ -38,7 +38,7 @@ Go to https://www.themoviedb.org/ and create an account. After creating an accou
 ## How does Cosine Similarity work?
   Regardless of the size of the documents, cosine similarity is a metric used to assess how similar they are. The cosine of the angle formed by two vectors projected in a multidimensional space is what is measured mathematically. Because the two comparable documents may still be oriented closer together even if they are far apart by the Euclidean distance (due to document size), cosine similarity is advantageous. The cosine similarity increases with decreasing angle.
   
-  ![image](https://user-images.githubusercontent.com/36665975/70401457-a7530680-1a55-11ea-9158-97d4e8515ca4.png)
+  ![cosine similarity](image-1.png)
 
   
 More about Cosine Similarity : [Understanding the Math behind Cosine Similarity](https://www.machinelearningplus.com/nlp/cosine-similarity/)
